@@ -1,8 +1,8 @@
-"if exists('g:format_vim_done')
-"	finish
-"endif
+if exists('g:format_vim_done')
+	finish
+endif
 
-"let g:format_vim_done=1
+let g:format_vim_done=1
 
 function s:Goback()
 	exec "normal ".s:cursorline."G".s:cursorcol."|"

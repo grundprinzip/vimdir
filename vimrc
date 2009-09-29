@@ -23,8 +23,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#CompleteCpp
 
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/boost
+"set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/boost
 
 " build tags of your own project with CTRL+F12
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
