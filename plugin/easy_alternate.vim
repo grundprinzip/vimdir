@@ -1,3 +1,34 @@
+" This plugin is a copy and merge from the already existing
+" alternate file plugin, but compared to existing one this
+" one is much simpler and may not feed your needs. 
+"
+" Basically it does not work with given search paths, but uses
+" the internally VIM function expand to search in directories below as well
+"
+" The following Key Mappings are defined
+"
+" A - find alternate
+" AT - as above, but in a new tab
+" AS - as above, but split horizontally
+" AV - as above, but split vertically
+"
+" In addition there is find alternate file under cursor with the 
+" same commands but an I instead of A
+"
+" If the VIM built in <g-f> does not work for you because the directory
+" structure is not usefull for VIM you can use
+"
+" FUC or FUCT as a replacement. In additon there are shorter 
+" mappings defined for
+"
+" \at for AT
+" \an for AN
+" \fu for FUCT
+"
+" Have Fun!
+" Martin Grund <grundprinzip@gmail.com>
+" September 2009
+
 if exists("loaded_easy_alternate")
     finish
 endif
