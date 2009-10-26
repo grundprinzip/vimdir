@@ -1,8 +1,8 @@
-if exists('g:format_vim_done')
+if exists('format_vim_done')
 	finish
 endif
 
-let g:format_vim_done=1
+let format_vim_done=1
 
 function s:Goback()
 	exec "normal ".s:cursorline."G".s:cursorcol."|"
@@ -151,7 +151,7 @@ function s:FormatLines(startl, endl)
 endfunction
 
 " format a paragraph
-function s:FormatParagraph()
+function! FormatParagraph()
 	let s:cursorline=line(".")
 	let s:cursorcol=col(".")
 	let cursorchar=strpart(getline("."), col(".") - 1, 1)
@@ -199,5 +199,6 @@ function s:FormatParagraph()
 	exec "normal ".tmpline."G".tmpcol."|"
 endfunction
 
-silent! unmap F 
-nnoremap <silent><buffer> F :silent call <SID>FormatParagraph()<CR>
+"silent! unmap F 
+comm! -nargs=? -bang F call FormatParagraph()
+"nmap <silent><buffer> F :silent call FormatParagraph()<CR>
